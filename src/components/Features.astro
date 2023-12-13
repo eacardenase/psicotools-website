@@ -1,0 +1,68 @@
+---
+import { Icon } from 'astro-icon';
+
+const features = [
+  {
+    title: 'High-Quality Web Development',
+    description:
+      'At our web development, we focus on creating top-notch websites. Your site will be designed to look great and work smoothly, meeting the highest quality.',
+    icon: 'bx:bxs-briefcase',
+  },
+  {
+    title: 'Tailored Websites',
+    description:
+      'We specialize in the development of custom websites that are meticulously tailored to meet the specific and unique requirements of our valued clients.',
+    icon: 'bx:bxs-window-alt',
+  },
+  {
+    title: 'High Performance and Excellent SEO, Copywriting',
+    description:
+      'Your webpage will excel in performance, boasting excellent SEO optimization and compelling copywriting to attract and engage your target audience effectively.',
+    icon: 'bx:bxs-data',
+  },
+  {
+    title: 'Unlimited Updates',
+    description:
+      'Benefit from the flexibility of making unlimited updates to your website, ensuring it stays current and aligned with your evolving business needs.',
+    icon: 'bx:bxs-bot',
+  },
+  {
+    title: 'Custom Domain',
+    description:
+      'Your website will have a personalized and unique domain name that reflects your brand, increasing recognition and trust among your visitors.',
+    icon: 'bx:bxs-file-find',
+  },
+  {
+    title: 'Hosting',
+    description:
+      'We provide reliable hosting solutions to keep your website accessible and responsive around the clock, ensuring a seamless online presence.',
+    icon: 'bx:bxs-user',
+  },
+];
+---
+
+<div class='mt-10 sm:mt-16 md:mt-0'>
+  <h2 class='text-4xl font-bold lg:text-5xl lg:tracking-tight'>
+    Everything you need to 🚀 your brand
+  </h2>
+  <p class='mt-4 text-lg text-slate-600'>
+    Here at Creative Big Media, we take the best parts of state-of-the-art tools
+    and add our own innovations.
+  </p>
+</div>
+
+<div class='mt-10 grid gap-8 sm:mt-16 sm:grid-cols-2 sm:gap-16 md:grid-cols-3'>
+  {
+    features.map((item) => (
+      <div class='flex items-start gap-4'>
+        <div class='mt-1 h-8 w-8  shrink-0 rounded-full bg-black p-2'>
+          <Icon class='text-white' name={item.icon} />
+        </div>
+        <div>
+          <h3 class='text-lg font-semibold'>{item.title}</h3>{' '}
+          <p class='mt-2 leading-relaxed text-slate-500'>{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

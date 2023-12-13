@@ -1,0 +1,94 @@
+---
+import { Image } from 'astro:assets';
+
+import { Astronav, MenuItems, MenuIcon } from 'astro-navbar';
+
+import Container from '@components/Container.astro';
+import Dropdown from '@components/navbar/Dropdown.astro';
+import navImage from 'assets/Ptools_large_negro.png';
+
+interface IMenuItem {
+  title: string;
+  path: string;
+  badge?: boolean;
+  children?: IMenuItem[];
+}
+
+const menuitems: IMenuItem[] = [
+  {
+    title: 'Inicio',
+    path: '#',
+  },
+  {
+    title: 'Servicios',
+    path: '#',
+  },
+  {
+    title: 'Psicotools',
+    path: '#',
+  },
+  {
+    title: 'Blog',
+    path: '#',
+  },
+  {
+    title: 'Hablemos',
+    path: '#',
+  },
+];
+---
+
+<Container>
+  <header class='my-5 flex flex-col items-center justify-between lg:flex-row'>
+    <Astronav>
+      <div class='flex w-full items-center justify-between lg:w-auto'>
+        <a href='/' class='text-lg'>
+          <Image
+            class='inline-block w-28 ring-white'
+            src={navImage}
+            alt='logo'
+            width={200}
+            height={200}
+            quality='high'
+          />
+        </a>
+        <div class='block lg:hidden'>
+          <MenuIcon class='h-6 w-6 text-blue-900' />
+        </div>
+      </div>
+      <MenuItems class='mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto'>
+        <ul class='flex flex-col items-center lg:flex-row lg:gap-3'>
+          {
+            menuitems.map((item, index) => (
+              <>
+                {item.children && (
+                  <Dropdown
+                    title={item.title}
+                    children={item.children}
+                    lastItem={index === menuitems.length - 1}
+                  />
+                )}
+
+                {!item.children && (
+                  <li>
+                    <a
+                      href={item.path}
+                      class='flex items-center py-4 text-2xl font-light text-blue-900 hover:text-gray-900 lg:px-3'
+                    >
+                      <span> {item.title}</span>
+                      {item.badge && (
+                        <span class='ml-1 animate-pulse rounded-full bg-indigo-600 px-2 py-0.5 text-[10px] font-semibold uppercase text-white'>
+                          New
+                        </span>
+                      )}
+                    </a>
+                  </li>
+                )}
+              </>
+            ))
+          }
+        </ul>
+      </MenuItems>
+    </Astronav>
+  </header>
+</Container>

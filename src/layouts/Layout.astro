@@ -1,0 +1,70 @@
+---
+import { SEO } from 'astro-seo';
+// import Footer from '@components/Footer.astro';
+import Navbar from '@components/navbar/Navbar.astro';
+import '@fontsource-variable/inter/index.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const resolvedImageWithDomain = new URL(
+  '/opengraph.png',
+  Astro.site
+).toString();
+
+const { title, description } = Astro.props;
+
+const makeTitle = title ? `${title} | Psicotools` : 'Psicotools';
+
+const makeDescription = description
+  ? `${description} | Psicotools`
+  : 'Psicotools is a Web Development and Digital Marketing Agency';
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+
+    <SEO
+      title={makeTitle}
+      description={makeDescription}
+      canonical={canonicalURL}
+      twitter={{
+        creator: '@eacardenase',
+        site: '@web3templates',
+        card: 'summary_large_image',
+      }}
+      openGraph={{
+        basic: {
+          url: canonicalURL,
+          type: 'website',
+          title: `Psicotools`,
+          image: resolvedImageWithDomain,
+        },
+        image: {
+          alt: 'Psicotools Homepage Screenshot',
+        },
+      }}
+    />
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+    <!-- <Footer /> -->
+    <style is:global>
+      /* Improve Page speed */
+      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+      img {
+        content-visibility: auto;
+      }
+    </style>
+  </body>
+</html>

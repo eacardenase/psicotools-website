@@ -1,0 +1,91 @@
+---
+import { Icon } from 'astro-icon';
+import { Picture } from 'astro:assets';
+
+import heroImage from 'assets/Character_3_Plant.png';
+import Link from '@components/ui/link.astro';
+---
+
+<main
+  class='absolute left-0 grid w-full place-items-center bg-gradient-to-br from-white from-0% via-blue-700 via-70% to-red-400 pb-8 pt-16 md:pb-10 md:pt-10 lg:grid-cols-2'
+>
+  <div class='w-80'>
+    <h1
+      class='text-center text-5xl font-bold text-white lg:text-6xl lg:tracking-tight xl:text-7xl xl:tracking-tighter'
+    >
+      Cuida de tu mente, es la clave de la felicidad.
+    </h1>
+    <p class='mt-8 max-w-xl text-center text-lg text-white'>
+      Queremos ayudar a entender que ir al psicólogo no es necesario porque
+      estás mal, es la mejor forma de ayudarte porque estás bien.
+    </p>
+    <div class='mt-8 flex max-w-sm flex-col items-center gap-3 sm:flex-row'>
+      <Link
+        href='contact'
+        target='_blank'
+        class='rounded-full border border-blue-600 bg-blue-600 px-8 font-semibold'
+        rel='noopener'
+      >
+        Agenda una valoración
+      </Link>
+      <Link
+        href='contact'
+        target='_blank'
+        class='rounded-full border border-white bg-transparent px-8 font-semibold'
+        rel='noopener'
+      >
+        Conoce nuestro equipo
+      </Link>
+    </div>
+    <div
+      class='mx-auto mt-8 flex w-52 flex-col items-center justify-center gap-y-8'
+    >
+      <div
+        class='flex w-full items-center justify-around gap-x-4 rounded-md bg-white px-5 py-5'
+      >
+        <Icon class='h-10 w-10 text-blue-600' name='ic:outline-people' />
+        <div class='flex flex-col items-start justify-start'>
+          <p class='text-2xl font-bold'>28 +</p>
+          <p class='text-sm capitalize text-blue-800'>EQUIPO DE EXPERTOS</p>
+        </div>
+      </div>
+      <div
+        class='flex w-full items-center justify-around gap-x-4 rounded-md bg-white px-5 py-5'
+      >
+        <Icon class='h-10 w-10 text-blue-600' name='ph:star-fill' />
+        <div class='flex flex-col items-start justify-start'>
+          <p class='text-2xl font-bold'>2.000 +</p>
+          <p class='text-sm capitalize text-blue-800'>CONSULTANTES</p>
+        </div>
+      </div>
+      <div
+        class='flex w-full items-center justify-around gap-x-4 rounded-md bg-white px-5 py-5'
+      >
+        <Icon class='h-10 w-10 text-blue-600' name='ic:outline-cookie' />
+        <div class='flex flex-col items-start justify-start'>
+          <p class='text-2xl font-bold'>360 +</p>
+          <p class='text-sm capitalize text-blue-800'>ACTIVIDADES GRUPALES</p>
+        </div>
+      </div>
+      <div
+        class='flex w-full items-center justify-around gap-x-4 rounded-md bg-white px-5 py-5'
+      >
+        <Icon class='h-10 w-10 text-blue-600' name='mdi:clock-plus-outline' />
+        <div class='flex flex-col items-start justify-start'>
+          <p class='text-2xl font-bold'>10.000 +</p>
+          <p class='text-sm capitalize text-blue-800'>HORAS DE APOYO</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='py-6'>
+    <Picture
+      src={heroImage}
+      alt='hero'
+      widths={[400, 600, 800]}
+      sizes='(max-width: 800px) 100vw, 620px'
+      loading='eager'
+      format='avif'
+    />
+  </div>
+</main>
