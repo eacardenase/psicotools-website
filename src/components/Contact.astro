@@ -1,105 +1,147 @@
 ---
-import { Image } from 'astro:assets';
+// import { Image } from 'astro:assets';
 
 import coverImage from 'assets/contact-image.jpg';
+import characterImage from 'assets/Character_5_Scrolling_1.png';
+import { Image } from 'astro:assets';
 ---
 
-<div
-  class='mx-auto flex w-full max-w-[480px] flex-col items-stretch justify-center self-stretch bg-neutral-50'
->
-  <div class='flex w-full flex-col bg-indigo-500 px-11 py-12'>
-    <div
-      class='mt-12 text-4xl font-extrabold leading-10 tracking-wide text-white'
-    >
-      Nuestra sede principal <br />
-       esta en Bogotá, pero te ayudamos virtualmente donde lo necesites.
-    </div>
-    <div class='mt-4 text-sm font-medium leading-5 tracking-wide text-white'>
-      Encontrar buenos servicios a la mano no siempre es tan sencillo, sin
-      embargo en Psicotools nos preocupamos por recibirte con la mejor atención
-      en dónde la necesites.
-    </div>
-  </div>
-  <div>
-    <Image
-      src={coverImage}
-      alt='cover'
-      class='w-full overflow-hidden object-contain object-center'
-    />
-    <div class='flex flex-col items-stretch bg-white px-10 py-10'>
-      <div
-        class='text-4xl font-extrabold leading-10 tracking-wide text-indigo-500'
-      >
-        Agenda ahora tu valoración gratuita.
-      </div>
-      <div class='mt-10 flex flex-col items-stretch rounded-sm bg-white pt-2'>
+<div class='flex flex-col items-stretch self-stretch bg-stone-50 pb-12'>
+  <div
+    class='mb-72 flex w-full flex-col items-center bg-indigo-500 px-20 pt-4 max-md:mb-10 max-md:max-w-full max-md:px-0 md:pt-12'
+  >
+    <div class='w-full max-w-[1050px] px-12 max-md:max-w-full md:px-0'>
+      <div class='flex gap-5 max-md:flex-col max-md:items-stretch max-md:gap-0'>
         <div
-          class='text-sm font-semibold leading-6 tracking-wide text-neutral-950'
-        >
-          Nombre*
-        </div>
-        <div
-          class='mt-4 items-start justify-center whitespace-nowrap rounded-md border border-solid border-[color:var(--UI-Color-muted-color,#BDBDBD)] bg-stone-50 py-5 pl-5 pr-16 text-sm leading-7 tracking-wide text-indigo-900'
-        >
-          Full Name
-        </div>
-        <div
-          class='mt-5 text-sm font-semibold leading-6 tracking-wide text-neutral-950'
-        >
-          Email*
-        </div>
-        <div
-          class='mt-4 items-start justify-center whitespace-nowrap rounded-md border border-solid border-[color:var(--UI-Color-muted-color,#BDBDBD)] bg-stone-50 py-5 pl-5 pr-16 text-sm leading-7 tracking-wide text-indigo-900'
-        >
-          example@gmail.com
-        </div>
-        <div
-          class='mt-5 text-sm font-semibold leading-6 tracking-wide text-neutral-950'
-        >
-          Ciudad*
-        </div>
-        <div
-          class='mt-5 flex w-full flex-col items-stretch justify-center bg-white'
+          class='flex w-[59%] flex-col items-stretch max-md:ml-0 max-md:w-full'
         >
           <div
-            class='flex items-stretch justify-between gap-5 rounded-md border border-solid border-[color:var(--UI-Color-muted-color,#BDBDBD)] bg-stone-50 px-5 py-5'
+            class='my-auto flex flex-col items-stretch py-12 max-md:mt-10 max-md:max-w-full'
           >
-            <div class='text-sm leading-7 tracking-wide text-indigo-900'>
-              Please Select
+            <div
+              class='text-4xl font-extrabold leading-10 tracking-wide text-white max-md:max-w-full'
+            >
+              Nuestra sede principal <br class='hidden md:block' />
+               esta en Bogotá, pero te ayudamos virtualmente <br
+                class='hidden md:block'
+              /> donde lo necesites.
             </div>
-            <img
-              loading='lazy'
-              src='https://cdn.builder.io/api/v1/image/assets/TEMP/098c11b6beb295513e1d0372c10f408949a2f341f6af9177dee0d37c03d4dfe8?apiKey=430af6713e9a438c8d4ff35a4a0174dc&'
-              class='aspect-[1.75] w-3.5 max-w-full shrink-0 self-start overflow-hidden fill-indigo-900 object-contain object-center'
-            />
+            <div
+              class='mt-4 text-sm font-medium leading-5 tracking-wide text-white max-md:max-w-full'
+            >
+              Encontrar buenos servicios a la mano no siempre es tan sencillo,
+              sin embargo en Psicotools nos preocupamos por recibirte con la
+              mejor atención en dónde la necesites.
+            </div>
           </div>
         </div>
         <div
-          class='mt-3 text-sm font-semibold leading-6 tracking-wide text-neutral-950'
+          class='ml-5 hidden w-[41%] flex-col items-stretch max-md:ml-0 max-md:w-full md:flex'
         >
-          Hora*
-        </div>
-        <div
-          class='mt-5 flex w-full flex-col items-stretch justify-center bg-white'
-        >
-          <div
-            class='flex items-stretch justify-between gap-5 rounded-md border border-solid border-[color:var(--UI-Color-muted-color,#BDBDBD)] bg-stone-50 px-5 py-5'
-          >
-            <div class='text-sm leading-7 tracking-wide text-indigo-900'>
-              4:00 Available
-            </div>
-            <img
-              loading='lazy'
-              src='https://cdn.builder.io/api/v1/image/assets/TEMP/098c11b6beb295513e1d0372c10f408949a2f341f6af9177dee0d37c03d4dfe8?apiKey=430af6713e9a438c8d4ff35a4a0174dc&'
-              class='aspect-[1.75] w-3.5 max-w-full shrink-0 self-start overflow-hidden fill-indigo-900 object-contain object-center'
-            />
-          </div>
+          <Image
+            loading='lazy'
+            src={characterImage}
+            alt='character'
+            class='aspect-[1.09] w-full self-stretch overflow-hidden object-center max-md:mt-8 md:grow md:object-contain'
+          />
         </div>
       </div>
-      <div
-        class='mt-10 items-center justify-center whitespace-nowrap rounded-md bg-blue-700 px-16 py-4 text-center text-sm font-bold leading-7 tracking-wide text-white'
-      >
-        Agendar valoración
+    </div>
+    <div class='z-[1] -mb-48 w-full md:max-w-5xl'>
+      <div class='flex max-md:flex-col max-md:items-stretch'>
+        <div
+          class='flex w-[35%] flex-col items-stretch max-md:ml-0 max-md:w-full'
+        >
+          <Image
+            alt='cover'
+            src={coverImage}
+            class='grow overflow-hidden object-cover object-center'
+          />
+        </div>
+        <div
+          class='flex w-[65%] flex-col items-stretch max-md:ml-0 max-md:w-full'
+        >
+          <div
+            class='flex w-full grow flex-col items-stretch bg-white p-10 max-md:max-w-full md:px-12 md:py-10'
+          >
+            <div
+              class='text-4xl font-bold leading-9 tracking-normal text-indigo-500 max-md:max-w-full'
+            >
+              Agenda ahora tu valoración gratuita.
+            </div>
+            <div
+              class='mt-6 flex flex-col items-stretch rounded-sm bg-white pt-2 max-md:max-w-full'
+            >
+              <div
+                class='text-sm font-semibold leading-6 tracking-wide text-neutral-950 max-md:max-w-full'
+              >
+                Nombre*
+              </div>
+              <div
+                class='mt-4 items-start justify-center whitespace-nowrap rounded-md border border-solid border-[color:var(--UI-Color-muted-color,#BDBDBD)] bg-stone-50 py-5 pl-5 pr-16 text-sm leading-7 tracking-wide text-indigo-500 max-md:max-w-full max-md:px-5'
+              >
+                Nombre completo
+              </div>
+              <div
+                class='mt-5 text-sm font-semibold leading-6 tracking-wide text-neutral-950 max-md:max-w-full'
+              >
+                Email*
+              </div>
+              <div
+                class='mt-4 items-start justify-center whitespace-nowrap rounded-md border border-solid border-[color:var(--UI-Color-muted-color,#BDBDBD)] bg-stone-50 py-5 pl-5 pr-16 text-sm leading-7 tracking-wide text-indigo-500 max-md:max-w-full max-md:px-5'
+              >
+                example@gmail.com
+              </div>
+              <div
+                class='mt-5 text-sm font-semibold leading-6 tracking-wide text-neutral-950 max-md:max-w-full'
+              >
+                Ciudad*
+              </div>
+              <div
+                class='mt-5 flex flex-col items-stretch justify-center bg-white max-md:max-w-full'
+              >
+                <div
+                  class='flex items-stretch justify-between gap-5 rounded-md border border-solid border-[color:var(--UI-Color-muted-color,#BDBDBD)] bg-stone-50 px-5 py-5 max-md:max-w-full max-md:flex-wrap'
+                >
+                  <div class='text-sm leading-7 tracking-wide text-indigo-500'>
+                    Selecciona tu ciudad
+                  </div>
+                  <img
+                    loading='lazy'
+                    src='https://cdn.builder.io/api/v1/image/assets/TEMP/c98cfe13aa19dd1b82607c77b6517793de59c1cb0c6d0efd0e28d504646f5de7?apiKey=430af6713e9a438c8d4ff35a4a0174dc&'
+                    class='aspect-[1.75] w-3.5 max-w-full shrink-0 self-start overflow-hidden fill-indigo-500 object-contain object-center'
+                  />
+                </div>
+              </div>
+              <div
+                class='mt-3 text-sm font-semibold leading-6 tracking-wide text-neutral-950 max-md:max-w-full'
+              >
+                Hora*
+              </div>
+              <div
+                class='mt-5 flex flex-col items-stretch justify-center bg-white max-md:max-w-full'
+              >
+                <div
+                  class='flex items-stretch justify-between gap-5 rounded-md border border-solid border-[color:var(--UI-Color-muted-color,#BDBDBD)] bg-stone-50 p-5 max-md:max-w-full max-md:flex-wrap'
+                >
+                  <div class='text-sm leading-7 tracking-wide text-indigo-500'>
+                    4:00 pm, estoy disponible
+                  </div>
+                  <img
+                    loading='lazy'
+                    src='https://cdn.builder.io/api/v1/image/assets/TEMP/c98cfe13aa19dd1b82607c77b6517793de59c1cb0c6d0efd0e28d504646f5de7?apiKey=430af6713e9a438c8d4ff35a4a0174dc&'
+                    class='aspect-[1.75] w-3.5 max-w-full shrink-0 self-start overflow-hidden fill-indigo-500 object-contain object-center'
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class='mt-6 items-center justify-center whitespace-nowrap rounded-[30px] bg-blue-700 px-16 py-4 text-center text-sm font-bold leading-7 tracking-wide text-white max-md:max-w-full max-md:px-5'
+            >
+              Agendar valoración
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
