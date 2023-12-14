@@ -1,119 +1,128 @@
----
-import { Icon } from 'astro-icon';
-
-const links = [
-  {
-    title: 'Product',
-    links: [
-      { text: 'Services', href: '/' },
-      { text: 'Team', href: '/about' },
-      { text: 'Success stories', href: '#' },
-      // { text: 'Pricing', href: '#' },
-      { text: 'Resources', href: '#' },
-    ],
-  },
-  {
-    title: 'Platform',
-    links: [
-      { text: 'Content Management System', href: '#' },
-      { text: 'Partners', href: '#' },
-    ],
-  },
-  {
-    title: 'Support',
-    links: [
-      { text: 'Docs', href: '#' },
-      { text: 'Professional Services', href: '#' },
-      { text: 'Skills', href: '#' },
-      { text: 'Status', href: '#' },
-    ],
-  },
-  {
-    title: 'Company',
-    links: [
-      { text: 'About', href: '/about' },
-      { text: 'Blog', href: '/blog' },
-    ],
-  },
-];
-
-const socialLinks = [
-  {
-    ariaLabel: 'Instagram',
-    icon: 'tabler:brand-instagram',
-    href: 'https://www.instagram.com/creativebigmedia/?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr',
-  },
-  {
-    ariaLabel: 'Facebook',
-    icon: 'tabler:brand-facebook',
-    href: 'https://www.facebook.com/people/Creative-Big-Media/61550080272300/?mibextid=LQQJ4d',
-  },
-  {
-    ariaLabel: 'Pinterest',
-    icon: 'simple-icons:pinterest',
-    href: 'https://co.pinterest.com/creativebigmedia/',
-  },
-];
----
-
-<footer class='not-prose dark relative my-20'>
-  <div class='pointer-events-none absolute inset-0' aria-hidden='true'></div>
-  <div class='relative mx-auto max-w-7xl px-4 sm:px-6'>
-    <div class='grid grid-cols-12 gap-4 gap-y-8 py-8 sm:gap-8 md:py-12'>
-      <div class='col-span-12 lg:col-span-4'>
-        <div class='mb-2'>
-          <a class='inline-block text-xl font-bold' href='/'
-            >Creative Big Media</a
-          >
-        </div>
+<footer class='not-prose dark relative mt-12'>
+  <div
+    class='mx-auto flex w-full max-w-lg flex-col items-stretch self-stretch bg-neutral-50'
+  >
+    <div class='flex w-full flex-col items-center justify-end bg-white px-20'>
+      <div
+        class='max-w-[259px] self-stretch text-2xl font-bold leading-8 tracking-normal text-neutral-950'
+      >
+        En contacto
       </div>
-      {
-        links.map(({ title, links }) => (
-          <div class='col-span-6 md:col-span-3 lg:col-span-2'>
-            <div class='mb-2 font-medium'>{title}</div>
-            {links.length && (
-              <ul class='text-sm'>
-                {links.map(({ text, href }) => (
-                  <li class='mb-2'>
-                    <a
-                      class='text-muted text-slate-500 transition duration-150 ease-in-out hover:text-slate-800'
-                      href={href}
-                    >
-                      <Fragment set:html={text} />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        ))
-      }
-    </div>
-    <div class='py-6 md:flex md:items-center md:justify-between md:py-8'>
-      {
-        socialLinks.length && (
-          <ul class='-ml-2 mb-4 flex items-center justify-center rtl:-mr-2 rtl:ml-0 md:order-1 md:mb-0 md:ml-4 rtl:md:ml-0 rtl:md:mr-4'>
-            {socialLinks.map(({ ariaLabel, href, icon }) => (
-              <li>
-                <a
-                  class='mx-1.5 inline-flex items-center rounded-lg p-2.5 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200'
-                  aria-label={ariaLabel}
-                  href={href}
-                >
-                  {icon && <Icon name={icon} class='h-6 w-6' />}
-                </a>
-              </li>
-            ))}
-          </ul>
-        )
-      }
-
-      <div class='mr-4 text-sm text-slate-500'>
-        <p>
-          Copyright © {new Date().getFullYear()} Creative Big Media · All
-          rights reserved.
+      <div
+        class='mt-6 text-sm font-medium leading-5 tracking-wide text-indigo-900'
+      >
+        Nuestra sede principal esta en Bogotá, pero te ayudamos virtualmente
+        donde lo necesites.
+      </div>
+      <div class='mt-6 flex items-stretch gap-5 self-stretch pr-20'>
+        <img
+          loading='lazy'
+          src='https://cdn.builder.io/api/v1/image/assets/TEMP/37e6fe40b60d8ccb9b85e4e457edeb11b8cf90462400753f9ee39784e5ce4812?apiKey=430af6713e9a438c8d4ff35a4a0174dc&'
+          class='aspect-square w-6 max-w-full shrink-0 overflow-hidden object-contain object-center'
+        />
+        <img
+          loading='lazy'
+          src='https://cdn.builder.io/api/v1/image/assets/TEMP/7c99dc7c83074e0cb5ed89f08af516aee47834c830261051e99f6b4b4c8a58f5?apiKey=430af6713e9a438c8d4ff35a4a0174dc&'
+          class='aspect-square w-6 max-w-full shrink-0 overflow-hidden object-contain object-center'
+        />
+        <img
+          loading='lazy'
+          src='https://cdn.builder.io/api/v1/image/assets/TEMP/594c780b7c54ec0ef6074755c38a61797dcae2b8070bd6c261d5c4e260ff2ff7?apiKey=430af6713e9a438c8d4ff35a4a0174dc&'
+          class='my-auto aspect-[1.2] w-6 max-w-full shrink-0 self-center overflow-hidden object-contain object-center'
+        />
+        <img
+          loading='lazy'
+          src='https://cdn.builder.io/api/v1/image/assets/TEMP/8cd8571f90843664f3cb28eaf65dae2bafbf29f46d9783473edea82668fd04ba?apiKey=430af6713e9a438c8d4ff35a4a0174dc&'
+          class='my-auto aspect-[1.33] w-6 max-w-full shrink-0 self-center overflow-hidden object-contain object-center'
+        />
+      </div>
+      <div class='w-full'>
+        <p
+          class='mt-8 text-2xl font-bold leading-8 tracking-normal text-neutral-950'
+        >
+          Psicotools
+        </p>
+        <p
+          class='mt-5 self-start whitespace-nowrap text-sm font-semibold leading-6 tracking-wide text-indigo-900'
+        >
+          Equipo
+        </p>
+        <p
+          class='mt-2.5 text-sm font-semibold leading-6 tracking-wide text-indigo-900'
+        >
+          Filosofia
+        </p>
+        <p
+          class='mt-2.5 text-sm font-semibold leading-6 tracking-wide text-indigo-900'
+        >
+          Trabaja con nosotros
+        </p>
+        <p
+          class='mt-2.5 text-sm font-semibold leading-6 tracking-wide text-indigo-900'
+        >
+          Blog
         </p>
       </div>
+      <div class='w-full'>
+        <p
+          class='mt-8 text-2xl font-bold leading-8 tracking-normal text-neutral-950'
+        >
+          Servicios
+        </p>
+        <p
+          class='mt-5 self-start whitespace-nowrap text-sm font-semibold leading-6 tracking-wide text-indigo-900'
+        >
+          Acompañamiento psicológico
+        </p>
+        <p
+          class='mt-2.5 text-sm font-semibold leading-6 tracking-wide text-indigo-900'
+        >
+          Musicoterapia
+        </p>
+        <p
+          class='mt-2.5 text-sm font-semibold leading-6 tracking-wide text-indigo-900'
+        >
+          Evaluación Psicológica
+        </p>
+        <p
+          class='mt-2.5 text-sm font-semibold leading-6 tracking-wide text-indigo-900'
+        >
+          Neuropsicología clínica
+        </p>
+        <p
+          class='mt-2.5 text-sm font-semibold leading-6 tracking-wide text-indigo-900'
+        >
+          Acompañ. psicoeducativo
+        </p>
+      </div>
+
+      <div class='w-full'>
+        <p
+          class='mt-8 max-w-[259px] self-stretch text-2xl font-bold leading-8 tracking-normal text-neutral-950'
+        >
+          Recursos
+        </p>
+        <p
+          class='mt-5 max-w-[259px] self-stretch text-sm font-semibold leading-6 tracking-wide text-indigo-900'
+        >
+          Valoración
+        </p>
+        <p
+          class='mt-2.5 max-w-[259px] self-stretch text-sm font-semibold leading-6 tracking-wide text-indigo-900'
+        >
+          Agendamiento
+        </p>
+        <p
+          class='mb-3.5 mt-2.5 max-w-[259px] self-stretch text-sm font-semibold leading-6 tracking-wide text-indigo-900'
+        >
+          Contáctenos
+        </p>
+      </div>
+    </div>
+    <div
+      class='w-full items-center justify-center bg-stone-50 px-16 py-10 text-center text-sm font-semibold leading-6 tracking-wide text-indigo-900'
+    >
+      Psicotools - All Right Reserved
     </div>
   </div>
 </footer>
