@@ -5,11 +5,14 @@ import { Image } from 'astro:assets';
 import heroImage from 'assets/Character_3_Plant.png';
 import Link from '@components/ui/link.astro';
 import Features from '@components/Features.astro';
+
+import Team from '@components/Team.astro';
+import Testimonials from './Testimonials.astro';
 ---
 
 <main class='absolute left-0 grid w-full place-items-center lg:grid-cols-2'>
   <div
-    class='bg-gradient-to-br from-white from-0% via-blue-700 via-70% to-red-400 pt-16 md:pt-10'
+    class='bg-gradient-to-br from-cyan-300 from-0% via-blue-700 via-70% to-red-400 pt-16 md:pt-10'
   >
     <h1 class='text-center text-5xl font-bold text-white'>
       Cuida de tu mente, es la clave de la felicidad.
@@ -81,4 +84,6 @@ import Features from '@components/Features.astro';
     </div>
   </div>
   <Features />
+  <Testimonials />
+  <Team />
 </main>
