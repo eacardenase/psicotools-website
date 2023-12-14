@@ -1,0 +1,106 @@
+---
+import { Image } from 'astro:assets';
+
+import coverImage from 'assets/contact-image.jpg';
+---
+
+<div
+  class='mx-auto flex w-full max-w-[480px] flex-col items-stretch justify-center self-stretch bg-neutral-50'
+>
+  <div class='flex w-full flex-col bg-indigo-500 px-11 py-12'>
+    <div
+      class='mt-12 text-4xl font-extrabold leading-10 tracking-wide text-white'
+    >
+      Nuestra sede principal <br />
+       esta en Bogotá, pero te ayudamos virtualmente donde lo necesites.
+    </div>
+    <div class='mt-4 text-sm font-medium leading-5 tracking-wide text-white'>
+      Encontrar buenos servicios a la mano no siempre es tan sencillo, sin
+      embargo en Psicotools nos preocupamos por recibirte con la mejor atención
+      en dónde la necesites.
+    </div>
+  </div>
+  <div>
+    <Image
+      src={coverImage}
+      alt='cover'
+      class='w-full overflow-hidden object-contain object-center'
+    />
+    <div class='flex flex-col items-stretch bg-white px-10 py-10'>
+      <div
+        class='text-4xl font-extrabold leading-10 tracking-wide text-indigo-500'
+      >
+        Agenda ahora tu valoración gratuita.
+      </div>
+      <div class='mt-10 flex flex-col items-stretch rounded-sm bg-white pt-2'>
+        <div
+          class='text-sm font-semibold leading-6 tracking-wide text-neutral-950'
+        >
+          Nombre*
+        </div>
+        <div
+          class='mt-4 items-start justify-center whitespace-nowrap rounded-md border border-solid border-[color:var(--UI-Color-muted-color,#BDBDBD)] bg-stone-50 py-5 pl-5 pr-16 text-sm leading-7 tracking-wide text-indigo-900'
+        >
+          Full Name
+        </div>
+        <div
+          class='mt-5 text-sm font-semibold leading-6 tracking-wide text-neutral-950'
+        >
+          Email*
+        </div>
+        <div
+          class='mt-4 items-start justify-center whitespace-nowrap rounded-md border border-solid border-[color:var(--UI-Color-muted-color,#BDBDBD)] bg-stone-50 py-5 pl-5 pr-16 text-sm leading-7 tracking-wide text-indigo-900'
+        >
+          example@gmail.com
+        </div>
+        <div
+          class='mt-5 text-sm font-semibold leading-6 tracking-wide text-neutral-950'
+        >
+          Ciudad*
+        </div>
+        <div
+          class='mt-5 flex w-full flex-col items-stretch justify-center bg-white'
+        >
+          <div
+            class='flex items-stretch justify-between gap-5 rounded-md border border-solid border-[color:var(--UI-Color-muted-color,#BDBDBD)] bg-stone-50 px-5 py-5'
+          >
+            <div class='text-sm leading-7 tracking-wide text-indigo-900'>
+              Please Select
+            </div>
+            <img
+              loading='lazy'
+              src='https://cdn.builder.io/api/v1/image/assets/TEMP/098c11b6beb295513e1d0372c10f408949a2f341f6af9177dee0d37c03d4dfe8?apiKey=430af6713e9a438c8d4ff35a4a0174dc&'
+              class='aspect-[1.75] w-3.5 max-w-full shrink-0 self-start overflow-hidden fill-indigo-900 object-contain object-center'
+            />
+          </div>
+        </div>
+        <div
+          class='mt-3 text-sm font-semibold leading-6 tracking-wide text-neutral-950'
+        >
+          Hora*
+        </div>
+        <div
+          class='mt-5 flex w-full flex-col items-stretch justify-center bg-white'
+        >
+          <div
+            class='flex items-stretch justify-between gap-5 rounded-md border border-solid border-[color:var(--UI-Color-muted-color,#BDBDBD)] bg-stone-50 px-5 py-5'
+          >
+            <div class='text-sm leading-7 tracking-wide text-indigo-900'>
+              4:00 Available
+            </div>
+            <img
+              loading='lazy'
+              src='https://cdn.builder.io/api/v1/image/assets/TEMP/098c11b6beb295513e1d0372c10f408949a2f341f6af9177dee0d37c03d4dfe8?apiKey=430af6713e9a438c8d4ff35a4a0174dc&'
+              class='aspect-[1.75] w-3.5 max-w-full shrink-0 self-start overflow-hidden fill-indigo-900 object-contain object-center'
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class='mt-10 items-center justify-center whitespace-nowrap rounded-md bg-blue-700 px-16 py-4 text-center text-sm font-bold leading-7 tracking-wide text-white'
+      >
+        Agendar valoración
+      </div>
+    </div>
+  </div>
+</div>
