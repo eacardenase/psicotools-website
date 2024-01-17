@@ -1,12 +1,10 @@
 ---
-import { Icon } from 'astro-icon';
 import { Image } from 'astro:assets';
 
 import heroImage from 'assets/Character_3_Plant.png';
 import Features from '@components/Features.astro';
 
 import Team from '@components/Team.astro';
-import Testimonials from '@components/Testimonials.astro';
 import Contact from '@components/Contact.astro';
 import Footer from '@components/Footer.astro';
 ---
@@ -46,52 +44,11 @@ import Footer from '@components/Footer.astro';
         Conoce nuestro equipo
       </a>
     </div>
-    <div
-      class='mx-auto mt-8 flex w-52 flex-col items-center justify-center gap-y-8 shadow-md md:h-28 md:w-3/4 md:flex-row'
-    >
-      <div
-        class='flex h-full w-full items-center justify-around gap-x-4 rounded-md bg-white px-5 py-5 md:rounded-none md:py-8'
-      >
-        <Icon class='h-10 w-10 text-indigo-500' name='ic:outline-people' />
-        <div class='flex flex-col items-start justify-start'>
-          <p class='text-2xl font-bold'>28 +</p>
-          <p class='text-sm capitalize text-blue-800'>EQUIPO DE EXPERTOS</p>
-        </div>
-      </div>
-      <div
-        class='flex h-full w-full items-center justify-around gap-x-4 rounded-md bg-white px-5 py-5 md:rounded-none md:py-8'
-      >
-        <Icon class='h-10 w-10 text-indigo-500' name='ph:star-fill' />
-        <div class='flex flex-col items-start justify-start'>
-          <p class='text-2xl font-bold'>2.000 +</p>
-          <p class='text-sm capitalize text-blue-800'>CONSULTANTES</p>
-        </div>
-      </div>
-      <div
-        class='flex h-full w-full items-center justify-around gap-x-4 rounded-md bg-white px-5 py-5 md:rounded-none md:py-8'
-      >
-        <Icon class='h-10 w-10 text-indigo-500' name='ic:outline-cookie' />
-        <div class='flex flex-col items-start justify-start'>
-          <p class='text-2xl font-bold'>360 +</p>
-          <p class='text-sm capitalize text-blue-800'>ACTIVIDADES GRUPALES</p>
-        </div>
-      </div>
-      <div
-        class='flex h-full w-full items-center justify-around gap-x-4 rounded-md bg-white px-5 py-5 md:rounded-none md:px-8 md:py-8'
-      >
-        <Icon class='h-10 w-10 text-indigo-500' name='mdi:clock-plus-outline' />
-        <div class='flex flex-col items-start justify-start'>
-          <p class='text-2xl font-bold'>10.000 +</p>
-          <p class='text-sm capitalize text-blue-800'>HORAS DE APOYO</p>
-        </div>
-      </div>
-    </div>
     <div class='mt-8 h-56 overflow-hidden md:hidden'>
       <Image src={heroImage} alt='hero' class='scale-150 object-cover pt-4' />
     </div>
   </div>
   <Features />
-  <Testimonials />
   <Team />
   <Contact />
   <Footer />
