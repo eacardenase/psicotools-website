@@ -56,7 +56,7 @@ import { Image } from 'astro:assets';
             class='grow overflow-hidden object-cover object-center'
           />
         </div>
-        <div
+        <!-- <div
           class='flex w-[65%] flex-col items-stretch max-md:ml-0 max-md:w-full'
         >
           <div
@@ -139,7 +139,90 @@ import { Image } from 'astro:assets';
               Agendar valoración
             </div>
           </div>
-        </div>
+        </div> -->
+        <form
+          data-netlify='true'
+          id='form'
+          name='contact-form'
+          novalidate
+          method='POST'
+          class='flex w-[65%] flex-col items-stretch max-md:ml-0 max-md:w-full'
+        >
+          <div
+            class='flex w-full grow flex-col items-stretch bg-white p-10 max-md:max-w-full md:px-12 md:py-10'
+          >
+            <div
+              class='text-4xl font-bold leading-9 tracking-normal text-indigo-500 max-md:max-w-full'
+            >
+              Agenda ahora tu valoración.
+            </div>
+            <div
+              class='mt-6 flex flex-col items-stretch rounded-sm bg-white pt-2 max-md:max-w-full'
+            >
+              <!-- Nombre -->
+              <label
+                for='nombre'
+                class='text-sm font-semibold leading-6 tracking-wide text-neutral-950 max-md:max-w-full'
+                >Nombre*</label
+              >
+              <input
+                type='text'
+                id='nombre'
+                name='nombre'
+                class='mt-4 items-start justify-center whitespace-nowrap rounded-md border border-solid border-[color:var(--UI-Color-muted-color,#BDBDBD)] bg-stone-50 py-5 pl-5 pr-16 text-sm leading-7 tracking-wide text-indigo-500 max-md:max-w-full max-md:px-5'
+                placeholder='Nombre completo'
+              />
+
+              <!-- Email -->
+              <label
+                for='email'
+                class='mt-5 text-sm font-semibold leading-6 tracking-wide text-neutral-950 max-md:max-w-full'
+                >Email*</label
+              >
+              <input
+                type='text'
+                id='email'
+                name='email'
+                class='mt-4 items-start justify-center whitespace-nowrap rounded-md border border-solid border-[color:var(--UI-Color-muted-color,#BDBDBD)] bg-stone-50 py-5 pl-5 pr-16 text-sm leading-7 tracking-wide text-indigo-500 max-md:max-w-full max-md:px-5'
+                placeholder='example@gmail.com'
+              />
+
+              <!-- Ciudad -->
+              <label
+                for='ciudad'
+                class='mt-5 text-sm font-semibold leading-6 tracking-wide text-neutral-950 max-md:max-w-full'
+                >Ciudad*</label
+              >
+              <input
+                type='text'
+                id='ciudad'
+                name='ciudad'
+                class='mt-4 items-start justify-center whitespace-nowrap rounded-md border border-solid border-[color:var(--UI-Color-muted-color,#BDBDBD)] bg-stone-50 py-5 pl-5 pr-16 text-sm leading-7 tracking-wide text-indigo-500 max-md:max-w-full max-md:px-5'
+                placeholder='Selecciona tu ciudad'
+              />
+
+              <!-- Hora -->
+              <label
+                for='hora'
+                class='mt-3 text-sm font-semibold leading-6 tracking-wide text-neutral-950 max-md:max-w-full'
+                >Hora*</label
+              >
+              <input
+                type='text'
+                id='hora'
+                name='hora'
+                class='mt-4 items-start justify-center whitespace-nowrap rounded-md border border-solid border-[color:var(--UI-Color-muted-color,#BDBDBD)] bg-stone-50 py-5 pl-5 pr-16 text-sm leading-7 tracking-wide text-indigo-500 max-md:max-w-full max-md:px-5'
+                placeholder='4:00 pm'
+              />
+            </div>
+            <button
+              type='submit'
+              class='mt-6 items-center justify-center whitespace-nowrap rounded-[30px] bg-blue-700 px-16 py-4 text-center text-sm font-bold leading-7 tracking-wide text-white max-md:max-w-full max-md:px-5'
+            >
+              Agendar valoración
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
